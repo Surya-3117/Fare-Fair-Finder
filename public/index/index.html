@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fair Fare Finder</title>
+  <link rel="stylesheet" href="../index/index.css" />
+</head>
+<body>
+  <div class="top-bar">
+    <span id="username"></span>
+    <button id="logoutBtn">Logout</button>
+  </div>
+
+  <div class="container">
+    <div class="image-container">
+      <img src="../images/High.webp" alt="Fair Fare Finder" />
+    </div>
+
+    <h2>Fair Fare Finder</h2>
+
+    <input type="text" id="start" placeholder="Current Location" />
+    <input type="text" id="end" placeholder="Destination" />
+
+    <input type="number" id="waitingTime" placeholder="Waiting Time (0 mins)" min="0" />
+<br>
+    <p>Is it a Night Time ride (Between 11 PM and 5 AM)<br><br></p>
+    <select id="nightTime">
+      <option value="Yes">Yes</option>
+      <option value="No" selected>No</option>
+    </select>
+    <br>
+<br>
+
+    <button onclick="fetchFare()">Calculate Fare</button>
+
+    <div class="loader" id="loader"></div>
+    <div id="result"></div>
+    <div class="popup" id="popup"></div>
+    <div id="map" class="map-container"></div>
+  </div>
+
+  <script src="../index/index.js"></script>
+</body>
+</html>
